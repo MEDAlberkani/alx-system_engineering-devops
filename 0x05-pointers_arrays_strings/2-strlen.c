@@ -1,20 +1,19 @@
 #include "main.h"
 
 /**
- * _puts - function that prints a string
- *
- * @str: pointer to char
- * Return: nothing
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length
  */
-
-void _puts(char *str)
+int _strlen(char *s)
 {
-	int i = 0;
+	int longi = 0;
 
-	while (str[i] != '\0')
+	while (*s != '\0')
 	{
-		_putchar(str[i]);
-		i += 1;
+		longi++;
+		s++;
 	}
-	_putchar('\n');
+
+	return (longi);
 }
