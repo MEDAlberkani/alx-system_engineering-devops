@@ -1,20 +1,24 @@
 #include "main.h"
 
 /**
- *  _strlen_recursion - Entry point
- *  Description: Returns the length of a string
- *  @s: Character
- *  Return: Length
+ * factorial - Entry point
+ * Description: Returns the factorial of a given number
+ * @n: Integer
+ * Return: int
  */
 
-int  _strlen_recursion(char *s)
+int factorial(int n)
 {
-	if (*s == '\0')
+	if (n < 0)
 	{
-		return (0);
+		return (-1);
+	}
+	else if (n == 0)
+	{
+		return (1);
 	}
 	else
 	{
-		return (1 +  _strlen_recursion(s + 1));
+		return (n * factorial(n - 1));
 	}
 }
